@@ -1,9 +1,9 @@
-def getDate = { ->
+ext {
+
+  getDate = { ->
     def date = new Date()
     def formattedDate = date.format('yyyyMMddHHmmss')
     return formattedDate
-}
+  }
 
-ext {
-  getDateTime = getDate
 }
