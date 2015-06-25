@@ -1,0 +1,16 @@
+def getVersionNameSuffix = { ->
+    try {
+        def stdout = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-parse', 'HEAD' //, '--dirty'
+            standardOutput = stdout
+        }
+        return stdout.toString().substring(0, 10)
+    }
+    catch (ignored) {
+        return null;
+    }
+}
+
+
+
