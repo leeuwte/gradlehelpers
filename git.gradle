@@ -1,4 +1,4 @@
-def getVersionNameSuffix = { ->
+def getVersionName = { ->
     try {
         def stdout = new ByteArrayOutputStream()
         exec {
@@ -13,4 +13,6 @@ def getVersionNameSuffix = { ->
 }
 
 
-
+ext {
+    getGitVersionNameSuffix = getVersionName
+}
