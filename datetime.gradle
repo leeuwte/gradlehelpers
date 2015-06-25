@@ -5,5 +5,5 @@ def getDate() {
 }
 
 ext {
-  getDate = getDate
+  getDateTime = getDate
 }
